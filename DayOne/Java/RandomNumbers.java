@@ -6,19 +6,18 @@ public class RandomNumbers {
         Scanner inputCollector = new Scanner(System.in);
         Random randomNumbers = new Random();
         
-
-        int userInput = 0;
-        
         int random = randomNumbers.nextInt(100) + 1;; 
         
-        int count = 1;
+        int maxTries = 5;
         
-        int guess = 0;
+        int attempts = 0;
+        
+        boolean won = false;
          
-        while (count <= 5) {
+        while (attempts < maxTries) {
 
             System.out.print("Guess the correct number between 1 - 100: ");
-                userInput = inputCollector.nextInt();
+            int userInput = inputCollector.nextInt();
                 
             count++;
             
